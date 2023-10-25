@@ -2,7 +2,7 @@ import hashlib
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 import os
-key = hashlib.sha256(b"tasciewapeoiu").digest()
+key = os.urandom(16)
 
 with open("flag.txt","r") as f:
     flag = f.read().strip().encode()
